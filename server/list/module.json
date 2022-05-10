@@ -1,0 +1,11 @@
+{
+    "name": "List",
+    "router": "index.js",
+    "crud": {
+        "update": {
+            "keys": ["name", "description"]
+        },
+        "delete": [""]
+    },
+    "dependencies": {}
+}

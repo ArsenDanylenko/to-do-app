@@ -1,0 +1,7 @@
+<label class="w-switch">
+	<div class="w-switch__toggle">
+		<input class="w-switch__input" type="checkbox" [(ngModel)]="wngModel" (ngModelChange)="wngModelChange.emit(wngModel)">
+		<span class="w-switch__slider _round"></span>
+	</div>
+	<div class="w-switch__text">{{label}}</div>
+</label>

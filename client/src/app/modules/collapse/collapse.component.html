@@ -1,0 +1,6 @@
+<div>
+	<h2>
+		<button type="button" (click)="show = !show">{{name}}</button>
+	</h2>
+	<ng-content *ngIf="show"></ng-content>
+</div>

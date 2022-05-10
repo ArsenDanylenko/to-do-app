@@ -1,0 +1,12 @@
+<label class="w-checkbox">
+	<input class="w-checkbox__input" type="checkbox" name="text" [(ngModel)]="wngModel" (ngModelChange)="wngModelChange.emit(wngModel)">
+	<div class="w-checkbox__body">
+		<span class="w-checkbox__svg"><svg width="12px" height="10px"><use xlink:href="#check"></use></svg></span>
+		<span class="w-checkbox__text">{{label}}</span>
+	</div>
+</label>
+<svg class="w-checkbox__svg-icon">
+	<symbol id="check" viewbox="0 0 12 10">
+		<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+	</symbol>
+</svg>

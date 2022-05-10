@@ -1,0 +1,7 @@
+<button [ngClass]="{
+	'_primary' : type == 'primary',
+	'_second' : type == 'second',
+	'_danger' : type == 'danger'
+}" class="w-btn">
+	<ng-content></ng-content>
+</button>

@@ -1,0 +1,36 @@
+@import "angular";
+:host {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	padding: 30px;
+	&_inner {
+		margin: 10px 20px 20px 20px;
+	}
+}
+
+.box {
+	border: 1px solid #f0f0f0;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	padding: 5px;
+}
+
+h3, h4 {
+	margin: 5px;
+}
+
+.highlight {
+	margin: 0 1px;
+	padding: 0.2em 0.4em;
+	font-size: .9em;
+	background: #f2f4f5;
+	border: 1px solid #f0f0f0;
+	border-radius: 6px;
+}

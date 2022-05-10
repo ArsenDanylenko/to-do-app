@@ -1,0 +1,158 @@
+<div class="content">
+	<h3>Examples:</h3>
+	
+	<!-- BUTTONS -->
+	<div class="box">
+		<h4>Buttons:</h4>
+		<div class="content_inner">
+			<wbutton type="primary"></wbutton>
+			<wbutton type="second"></wbutton>
+			<wbutton type="danger"></wbutton>
+		</div>
+		<div class="_inner_description">
+			There are <span class="highlight">primary</span> button, <span class="highlight">second</span> button and <span class="highlight">danger</span> button.
+		</div>
+	</div>
+
+	<!-- INPUT -->
+	<div class="box">
+		<h4>Input:</h4>
+		<div class="content_inner">
+
+			<winput ngDefaultControl [(ngModel)]="value.input" (ngModelChange)="test()" label="This is a label text for input" placeholder="This is a placeholder text for input"></winput>
+
+		</div>
+	</div>
+
+	<!-- TEXTAREA -->
+	<div class="box">
+		<h4>TextArea:</h4>
+		<div class="content_inner">
+
+			<wtextarea ngDefaultControl [(ngModel)]="value.textarea" (ngModelChange)="test()" label="This is a label text for textarea" placeholder="This is a placeholder text for textarea"></wtextarea>
+
+		</div>
+	</div>
+
+	<!-- SELECT -->
+	<div class="box">
+		<h4>Select:</h4>
+		<div class="content_inner">
+			
+			<wselect [items]="['Item1', 'Item2']" [select]="'Choose an item..'"></wselect>
+
+		</div>
+	</div>
+
+	<!-- SWITCH -->
+	<div class="box">
+		<h4>Switch:</h4>
+		<div class="content_inner">
+
+			<wswitch label="Sound Notification" [(wngModel)]="value.switch" (wngModelChange)="test()"></wswitch>
+
+		</div>
+	</div>
+
+	<!-- CHECKBOX -->
+	<div class="box">
+		<h4>Checkbox:</h4>
+		<div class="content_inner">
+
+			<wcheckbox label="Click me!" [(wngModel)]="value.checkbox" (wngModelChange)="test()" ></wcheckbox>
+
+		</div>
+	</div>
+
+	<!-- RADIO -->
+	<div class="box">
+		<h4>Radio:</h4>
+		<div class="content_inner">
+
+			<wradio label="Male" name="sex" value="male" [(wngModel)]="value.radio" (wngModelChange)="test()"></wradio>
+
+			<wradio label="Female" name="sex" value="female" [(wngModel)]="value.radio" (wngModelChange)="test()"></wradio>
+
+		</div>
+	</div>
+
+	<!-- TABLE -->
+	<div class="box">
+		<h4>Table:</h4>
+		<div class="content_inner">
+			<wtable [columns]="columns" [config]="{pageSizeOptions: [5, 10, 25], perPage: 5, page: 1, searchable: true}" [rows]="rows"></wtable><br>
+
+			<wtable [columns]="columns" [config]="{pageSizeOptions: [1, 2, 3], perPage: 2, page: 1, searchable: false}" [rows]="rows"></wtable>
+		</div>
+	</div>
+
+	<!-- CARD -->
+	<div class="box">
+		<h4>Card:</h4>
+		<div class="content_inner">
+
+			<wcard>
+				<strong>Card`s #1 content</strong>
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Magni at molestias dolorum ab distinctio. Quisquam illo est dolore, impedit maiores.
+			</wcard><br>
+
+			<wcard padding="true">
+				<strong>Card`s #2 content</strong>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi sunt earum deleniti aut, optio libero tenetur minima, maxime molestiae nostrum error maiores praesentium, aspernatur inventore consectetur voluptatibus magni esse qui.
+			</wcard><br>
+
+			<wcard header="Card`s #3 header">
+				<strong>Card`s #3 content</strong>
+				Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Assumenda provident nostrum ea minima reprehenderit quas. Magni amet illo eum dolorum dolores itaque tenetur mollitia adipisci numquam consectetur sed et at quisquam sunt soluta voluptate maiores aut fuga quod a incidunt, aperiam quam unde nulla nesciunt. Eveniet vitae nemo obcaecati nobis?
+			</wcard><br>
+
+			<wcard header="Card`s #4 header" [padding]="true">
+				<strong>Card`s #4 content</strong>
+				Lorem ipsum dolor, sit amet.
+			</wcard>
+
+		</div>
+	</div>
+
+	<!-- BREADCRUMB -->
+	<div class="box">
+		<h4>Breadcrumb:</h4>
+		<div class="content_inner">
+
+			<wbreadcrumb [path]="[['Home', '#'], ['Library', 'uikit'], ['Data', '#']]"></wbreadcrumb>
+
+		</div>
+	</div>
+
+	<!-- COLLAPSE -->
+	<div class="box">
+		<h4>Collapse:</h4>
+		<div class="content_inner">
+
+			<wcollapse name="Accordion #1">
+				<strong>This is the first item's accordion body</strong>
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Dignissimos assumenda repudiandae earum reiciendis voluptas tenetur ex quidem, dolorem, quae? Ab accusantium laudantium, odio porro tempore velit voluptatem laboriosam, suscipit aspernatur!
+			</wcollapse>
+
+			<wcollapse name="Accordion #2">
+				<strong>This is the second item's accordion body</strong>
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Asperiores, minus nisi iure suscipit, recusandae rerum expedita libero explicabo distinctio sed assumenda qui animi quis temporibus, porro dolores voluptates iste totam!
+			</wcollapse>
+
+		</div>
+	</div>
+
+	<!-- PROGRESS -->
+	<div class="box">
+		<h4>PROGRESS:</h4>
+		<div class="content_inner">
+
+			<wprogress progress="25"></wprogress><br>
+			<wprogress progress="50"></wprogress><br>	
+			<wprogress progress="75"></wprogress><br>		
+			<wprogress progress="100"></wprogress>		
+			
+		</div>
+	</div>
+
+</div>

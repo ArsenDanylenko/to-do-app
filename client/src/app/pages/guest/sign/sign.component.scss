@@ -1,0 +1,47 @@
+@import "angular";
+:host {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.auth-wrapper {
+    @include flexBox(flex, null, center, center, null);
+    background: var(--c-bg-primary);
+    flex-grow: 1;
+    padding: 20px;
+}
+.auth {
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    border-radius: var(--b-radius-card);
+    box-shadow: 0px 0px 6px var(--c-shadow);
+    background: var(--c-white);
+    &__title {
+        font-size: var(--fs) + 8px;
+        font-weight: var(--ff-bold);
+        color: var(--c-text-primary);
+        text-align: center;
+        margin-bottom: 15px;
+        @include bp-max(sm) {
+            font-size: var(--fs) + 2px;
+        }
+    }
+    &__btn {
+        text-align: center;
+        margin-top: 30px;
+        .w-btn {
+            margin: 0;
+            width: 100%;
+        }
+    }
+    @include bp-max(sm) {
+        .form__title {
+            font-size: var(--fs) - 2px;
+        }
+    }
+}

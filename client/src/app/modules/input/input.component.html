@@ -1,0 +1,6 @@
+<div class="content_inner">
+	<label class="w-forms">
+		<span class="w-forms__title">{{label}}</span>
+		<input class="w-forms__input" type="text" name="text" [placeholder]="placeholder" [(ngModel)]="ngModel" (ngModelChange)="ngModelChange.emit(ngModel)">
+	</label>
+</div>

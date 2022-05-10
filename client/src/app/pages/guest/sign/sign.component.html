@@ -1,0 +1,22 @@
+<div class="auth-wrapper">
+	<div class="auth">
+		<div class="auth__title">Sign In / Sign Up</div>
+		<form class="auth__forms" (ngSubmit)="submit()">
+			<div class="w-forms">
+				<span class="w-forms__title">Email:</span>
+				<input class="w-forms__input" (keydown.enter)="!user.password && password_focus()" type="text" placeholder="Email" name="email" [(ngModel)]="user.email" #email>
+			</div>
+			<div class="w-forms">
+				<span class="w-forms__title">Password:</span>
+				<input class="w-forms__input" type="password" placeholder="Password" name="password" [(ngModel)]="user.password" #password>
+			</div>
+			<div class="w-forms" *ngIf="reseting">
+				<span class="w-forms__title">Code:</span>
+				<input class="w-forms__input" type="text" placeholder="Code" name="code" [(ngModel)]="user.code">
+			</div>
+			<div class="auth__btn">
+				<button class="w-btn _primary" type="submit">Let's go</button>
+			</div>
+		</form>
+	</div>
+</div>
