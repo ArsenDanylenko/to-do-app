@@ -1,11 +1,14 @@
 <div>
-	<button type="button" class="material-icons" (click)="ts.create(task)">add</button><br>
+	<button type="button" class="material-icons" (click)="ts.create(task); modal.show({component:'task', task: task})">add</button><br>
 </div>
 <div *ngFor="let tasks of ts.tasks">
-	<input type="text" [(ngModel)]="task.name" (ngModelChange)="name"><br>
-	<textarea id="description" name="description" rows="10" cols="10" [(ngModel)]="task.description" [(ngModel)]="ts.update" (ngModelChange)="ts.update(task)"></textarea><br>
-	<button type="button" (click)="ts.update(task)" (ngModelChange)="ts.update(task)">Save</button>
-	<button type="button" (click)="ts.delete(tasks)">Delete</button>
+	<h3>{{tasks.name}}</h3>
+	<p>{{tasks.description}}</p><br>
+	<div>		
+		<button type="button" (click)="ts.delete(tasks)">Delete
+		</button>
+	</div>
 </div>
+
 
 

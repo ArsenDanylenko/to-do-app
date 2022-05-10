@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TaskService } from '@services';
+import { ModalService } from 'wacom';
 
 @Component({
 	selector: 'tasks',
@@ -12,5 +13,11 @@ export class TasksComponent{
 		description: any;
 	};
 	constructor(
-		public ts: TaskService) {}
+		public ts: TaskService,
+		public modal: ModalService
+		) {}
+
+	// display() {
+		
+	// }
 }

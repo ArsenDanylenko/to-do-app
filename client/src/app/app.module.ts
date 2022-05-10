@@ -10,6 +10,7 @@ import { CoreModule } from 'src/app/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // config
 import { WacomModule, MetaGuard } from 'wacom';
+import { TaskComponent } from './modals/task/task.component';
 
 const routes: Routes = [{
 	path: '',
@@ -79,7 +80,8 @@ const routes: Routes = [{
     declarations: [
         AppComponent,
         GuestComponent,
-        UserComponent
+        UserComponent,
+        TaskComponent
     ],
     imports: [
         CoreModule,
@@ -99,7 +101,8 @@ const routes: Routes = [{
                 alerts: { /* alerts */}
             },
             modal: {
-                modals: { /* modals */}
+                modals: { /* modals */
+					task: TaskComponent,}
             },
             loader: {
                 loaders: { /* loaders */}
