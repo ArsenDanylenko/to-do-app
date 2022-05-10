@@ -1,1 +1,11 @@
-<p>Page Tasks is connected</p>
+<div>
+	<button type="button" class="material-icons" (click)="ts.create(task)">add</button><br>
+</div>
+<div *ngFor="let tasks of ts.tasks">
+	<input type="text" [(ngModel)]="task.name" (ngModelChange)="name"><br>
+	<textarea id="description" name="description" rows="10" cols="10" [(ngModel)]="task.description" [(ngModel)]="ts.update" (ngModelChange)="ts.update(task)"></textarea><br>
+	<button type="button" (click)="ts.update(task)" (ngModelChange)="ts.update(task)">Save</button>
+	<button type="button" (click)="ts.delete(tasks)">Delete</button>
+</div>
+
+
