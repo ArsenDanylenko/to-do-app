@@ -2,6 +2,11 @@
 	<nav class="nav" (clickOutside)="show=false">
 		<ul class="nav__ul container" [class._active]="show">
 			<li class="nav__li">
+				<a class="nav__a" (click)="show=false" routerLinkActive="_activeLink"  routerLink="/tasks">
+					<span>tasks</span>
+				</a>
+			</li>
+			<li class="nav__li">
 				<a class="nav__a" (click)="show=false" routerLinkActive="_activeLink"  routerLink="/profile">
 					<span class="material-icons">home</span>
 				</a>
