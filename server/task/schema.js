@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema({
 	name: String,
 	description: String,
-	time: Number,
-	date: Number,
+	time: String,
+	date: String,
 	author: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 	moderators: [{type: mongoose.Schema.Types.ObjectId, sparse: true, ref: 'User'}],
 	url: {type: String, unique: true, sparse: true, trim: true}
