@@ -1,9 +1,12 @@
-<div> <!-- CONTAINER START -->
+<div> <!-- CONTAINER STARTS -->
 
-	<div *ngFor="let task of ts.tasks"><!-- MAIN DIV START -->
+	<div *ngFor="let task of ts.tasks"><!-- MAIN DIV STARTS -->
 
-		<div><!-- beginning of TODAY -->
+		<!-- -------------------------------------------------------------------------------TODAY----------------------- -->
+
+		<div>{{ts._tasks.status.today}}
 			<h1>Today</h1>
+			<!-- <p>{{ts._tasks.status.today}}</p> -->
 			<div>
 				<button (click)="modal.show({component:'task', task})">
 					<h3>{{task.name}}</h3>
@@ -16,10 +19,15 @@
 				<button type="button" (click)="ts.delete(task)">Delete
 				</button>
 			</div>
-		</div><!-- end of TODAY -->
+		</div>
 
-		<div><!-- beginning of UPCOMING -->
+		<!-- ---------------------TODAY----------------------------------------------------------------------------------- -->
+
+		<!-- -------------------------------------------------------------------------------UPCOMING---------------------- -->
+
+		<div>{{ts._tasks.status.upcoming}}
 			<h1>Upcoming</h1>
+			<!-- <p>{{ts._tasks.status.upcoming}}</p> -->
 			<div>
 				<button (click)="modal.show({component:'task', task})">
 					<h3>{{task.name}}</h3>
@@ -32,18 +40,21 @@
 				<button type="button" (click)="ts.delete(task)">Delete
 				</button>
 			</div>			
-		</div><!-- end of UPCOMING -->
+		</div>
 
-	</div><!-- MAIN DIV END-->
+		<!-- --------------------UPCOMING-------------------------------------------------------------------------------- -->
 
-<!-- -----------------------------------------------------------------------------------------MAIN BUTTON------------------------- -->
+	</div><!-- MAIN DIV ENDS-->
+
+	<!-- --------------------------------------------------------------------------------------MAIN BUTTON-------------------- -->
 	<div>
-		<button type="button" id="today" class="material-icons" (click)="display()">add
-		</button>
-	</div>
-<!-- -----------------------------------------------------------------------------------------MAIN BUTTON------------------------- -->
+		<button type="button" id="today" class="material-icons"
+		(click)="display()">add
+	</button>
+</div>
+<!-- ---------------------------MAIN BUTTON--------------------------------------------------------------------------------------- -->
 
-</div> <!-- CONTAINER END -->
+</div> <!-- CONTAINER ENDS -->
 
 
 
