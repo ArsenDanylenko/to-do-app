@@ -15,9 +15,11 @@ export class TaskService {
 			groups: 'status',
 			replace: {
 				status: (val, cb, task) => {
-					let today;
-					today = new Date().getFullYear() + '-' + ('0' + (new Date().getMonth() + 1)).slice(-2) + '-' + new Date().getDate();
-					console.log(task.date, today);
+					const n = new Date();
+					let today = n.getFullYear() + '-';
+					today += (n.getMonth() > 9 ? '' : '0') + (n.getMonth() + 1)+ '-';
+					today += (n.getDate() > 10 ? '' : '0') + n.getDate();
+
 					if(task.date === today) {
 						cb('today')
 					} else {

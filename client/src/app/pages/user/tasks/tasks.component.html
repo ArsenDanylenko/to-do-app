@@ -1,12 +1,11 @@
 <div> <!-- CONTAINER STARTS -->
 
-	<div *ngFor="let task of ts.tasks"><!-- MAIN DIV STARTS -->
+	<div><!-- MAIN DIV STARTS -->
 
 		<!-- -------------------------------------------------------------------------------TODAY----------------------- -->
 
-		<div>{{ts._tasks.status.today}}
-			<h1>Today</h1>
-			<!-- <p>{{ts._tasks.status.today}}</p> -->
+		<h1>Today</h1>
+		<div *ngFor="let task of ts._tasks.status.today">
 			<div>
 				<button (click)="modal.show({component:'task', task})">
 					<h3>{{task.name}}</h3>
@@ -25,9 +24,8 @@
 
 		<!-- -------------------------------------------------------------------------------UPCOMING---------------------- -->
 
-		<div>{{ts._tasks.status.upcoming}}
-			<h1>Upcoming</h1>
-			<!-- <p>{{ts._tasks.status.upcoming}}</p> -->
+		<h1>Upcoming</h1>
+		<div *ngFor="let task of ts._tasks.status.upcoming">
 			<div>
 				<button (click)="modal.show({component:'task', task})">
 					<h3>{{task.name}}</h3>
