@@ -1,10 +1,11 @@
 <div> <!-- CONTAINER START -->
+
 	<div *ngFor="let task of ts.tasks"><!-- MAIN DIV START -->
 
 		<div><!-- beginning of TODAY -->
-			<h1 for="today">Today</h1>
+			<h1>Today</h1>
 			<div>
-				<button (click)="modal.show({component:'task'})">
+				<button (click)="modal.show({component:'task', task})">
 					<h3>{{task.name}}</h3>
 					<p>{{task.description}}</p>
 					<p>{{task.date}}</p>
@@ -18,9 +19,9 @@
 		</div><!-- end of TODAY -->
 
 		<div><!-- beginning of UPCOMING -->
-			<h1 for="upcoming">Upcoming</h1>
+			<h1>Upcoming</h1>
 			<div>
-				<button (click)="modal.show({component:'task'})">
+				<button (click)="modal.show({component:'task', task})">
 					<h3>{{task.name}}</h3>
 					<p>{{task.description}}</p>
 					<p>{{task.date}}</p>
@@ -35,10 +36,12 @@
 
 	</div><!-- MAIN DIV END-->
 
-	<div><!-- MAIN Button START-->
-		<button type="button" id="today" class="material-icons" (click)="ts.create(task); modal.show({component:'task'})">add
+<!-- -----------------------------------------------------------------------------------------MAIN BUTTON------------------------- -->
+	<div>
+		<button type="button" id="today" class="material-icons" (click)="display()">add
 		</button>
-	</div><!-- MAIN Button END-->
+	</div>
+<!-- -----------------------------------------------------------------------------------------MAIN BUTTON------------------------- -->
 
 </div> <!-- CONTAINER END -->
 

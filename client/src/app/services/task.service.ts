@@ -12,10 +12,11 @@ export class TaskService {
 			this._tasks = obj;
 		});
 	}
-	create(task:any={}, text = 'task has been created.') {
+	create(task:any={}, cb=task=>{}) {
 		if(task._id) return this.save(task);
 		this.mongo.create('task', task, created=>{
-			this.alert.show({ text });
+			cb(created);
+			//this.alert.show({ text });
 		}); 
 	}
 	doc(taskId){

@@ -14,12 +14,16 @@ export class TasksComponent{
 		time: any;
 		date: any;
 	};
+
 	constructor(
 		public ts: TaskService,
 		public modal: ModalService
 		) {}
 
-	// display() {
-		
-	// }
+	display() {
+		this.ts.create({}, task => {
+			this.modal.show({component: 'task', task});
+		})
+	}
+
 }

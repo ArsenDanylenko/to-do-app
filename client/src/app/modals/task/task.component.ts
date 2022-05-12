@@ -9,6 +9,7 @@ import { TaskService } from '@services'
 })
 export class TaskComponent{
 	public task: any = {};
+	
 	constructor(
 		public ts: TaskService
 		) {}
