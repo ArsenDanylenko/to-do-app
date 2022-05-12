@@ -1,18 +1,18 @@
 <div> <!-- CONTAINER START -->
-	<div *ngFor="let tasks of ts.tasks"><!-- MAIN DIV START -->
+	<div *ngFor="let task of ts.tasks"><!-- MAIN DIV START -->
 
 		<div><!-- beginning of TODAY -->
 			<h1 for="today">Today</h1>
 			<div>
-				<button (click)="modal.show({component:'task', task: task})">
-					<h3>{{tasks.name}}</h3>
-					<p>{{tasks.description}}</p>
-					<p>{{tasks.date}}</p>
-					<p>{{tasks.time}}</p><br>
+				<button (click)="modal.show({component:'task'})">
+					<h3>{{task.name}}</h3>
+					<p>{{task.description}}</p>
+					<p>{{task.date}}</p>
+					<p>{{task.time}}</p><br>
 				</button>
 			</div>
 			<div>		
-				<button type="button" (click)="ts.delete(tasks)">Delete
+				<button type="button" (click)="ts.delete(task)">Delete
 				</button>
 			</div>
 		</div><!-- end of TODAY -->
@@ -20,15 +20,15 @@
 		<div><!-- beginning of UPCOMING -->
 			<h1 for="upcoming">Upcoming</h1>
 			<div>
-				<button (click)="modal.show({component:'task', task: task})">
-					<h3>{{tasks.name}}</h3>
-					<p>{{tasks.description}}</p>
-					<p>{{tasks.date}}</p>
-					<p>{{tasks.time}}</p><br>
+				<button (click)="modal.show({component:'task'})">
+					<h3>{{task.name}}</h3>
+					<p>{{task.description}}</p>
+					<p>{{task.date}}</p>
+					<p>{{task.time}}</p><br>
 				</button>
 			</div>
 			<div>		
-				<button type="button" (click)="ts.delete(tasks)">Delete
+				<button type="button" (click)="ts.delete(task)">Delete
 				</button>
 			</div>			
 		</div><!-- end of UPCOMING -->
@@ -36,7 +36,7 @@
 	</div><!-- MAIN DIV END-->
 
 	<div><!-- MAIN Button START-->
-		<button type="button" id="today" class="material-icons" (click)="ts.create(task); modal.show({component:'task', task: task})">add
+		<button type="button" id="today" class="material-icons" (click)="ts.create(task); modal.show({component:'task'})">add
 		</button>
 	</div><!-- MAIN Button END-->
 

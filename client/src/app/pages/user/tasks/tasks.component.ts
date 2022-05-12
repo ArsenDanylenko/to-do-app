@@ -11,6 +11,8 @@ export class TasksComponent{
 	public task: {
 		name: any;
 		description: any;
+		time: any;
+		date: any;
 	};
 	constructor(
 		public ts: TaskService,

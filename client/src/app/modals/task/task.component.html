@@ -1,9 +1,8 @@
-<!-- ---------------------MODAL------------------------ -->
-
-<div *ngFor="let tasks of ts.tasks">
-	<input type="text" [(ngModel)]="tasks.name" (ngModelChange)="ts.update(tasks)"><br>
-	<textarea id="description" name="description" rows="10" cols="10" [(ngModel)]="tasks.description" (ngModelChange)="ts.update(tasks)"></textarea><br>
+<!-- ---------------------MODAL------------------------------ -->
+<div>
+	<input id="name" type="text" [(ngModel)]="task.name" (ngModelChange)="ts.update(task)"><br>
+	<textarea id="description" name="description" rows="10" cols="10" [(ngModel)]="task.description" (ngModelChange)="ts.update(task)"></textarea><br>
 	<label for="date">Set the remainder time</label><br>
-	<input type="date" name="remainderdate" id="date" [(ngModel)]="tasks.date" (ngModelChange)="ts.update(tasks)"><br>
-	<input type="time" name="remaindertime" [(ngModel)]="tasks.time" (ngModelChange)="ts.update(tasks)">
+	<input type="date" name="remainderdate" id="date" [(ngModel)]="task.date" (ngModelChange)="ts.update(task)"><br>
+	<input type="time" name="remaindertime" [(ngModel)]="task.time" (ngModelChange)="ts.update(task)">
 </div>
