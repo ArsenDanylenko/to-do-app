@@ -13,6 +13,7 @@ export class TasksComponent{
 		description: any;
 		time: any;
 		date: any;
+		clear: boolean;
 	};
 
 	constructor(

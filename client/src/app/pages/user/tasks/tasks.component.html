@@ -5,19 +5,19 @@
 
 		<!-- -------------------------------------------------------------------------------TODAY----------------------- -->
 
-		<h1>Today</h1>
+		<h2>Today</h2>
 		<div *ngFor="let task of ts._tasks.status.today">
 			<div  id="task">
 				<div>
-					<input type="radio" name="radio" id="radio1" />
-					<label class="cursor" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</label>
+					<input type="radio" name="radio" id="radio1" (click)="task.clear=!task.clear" />
+					<span class="cursor" [class.done] ="task.clear" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</span>
 				</div>
 				<div class="time cursor">
-					<div class="daytime">
+					<div class="daytime" [class.done]="task.clear">
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
 					</div>
-					<button type="button" (click)="ts.delete(task)" class="material-icons">clear
+					<button *ngIf="task.clear" [(ngModel)]="task.clear" type="button" (click)="ts.delete(task)" class="material-icons">clear
 					</button>
 				</div>
 			</div>
@@ -27,19 +27,19 @@
 
 		<!-- -------------------------------------------------------------------------------UPCOMING---------------------- -->
 
-		<h1>Upcoming</h1>
+		<h2>Upcoming</h2>
 		<div *ngFor="let task of ts._tasks.status.upcoming">
 			<div  id="task">
 				<div>
-					<input type="radio" name="radio" id="radio1" />
-					<label class="cursor" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</label>
+					<input type="radio" name="radio" id="radio1" (click)="task.clear=!task.clear" />
+					<span class="cursor" [class.done]="task.clear" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</span>
 				</div>
 				<div class="time cursor">
-					<div class="daytime">
+					<div class="daytime" [class.done]="task.clear">
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
 					</div>
-					<button type="button" (click)="ts.delete(task)" class="material-icons">clear
+					<button *ngIf="task.clear" [(ngModel)]="task.clear" type="button" (click)="ts.delete(task)" class="material-icons">clear
 					</button>
 				</div>
 			</div>

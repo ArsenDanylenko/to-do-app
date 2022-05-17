@@ -3,7 +3,7 @@
     "router": "index.js",
     "crud": {
         "update": {
-            "keys": ["name", "description", "time", "date"]
+            "keys": ["name", "description", "time", "date", "clear"]
         },
         "delete": [""]
     },
