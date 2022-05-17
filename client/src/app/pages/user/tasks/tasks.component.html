@@ -1,7 +1,7 @@
 <!-- ---------------------MAIN HTML TEMPLATE------------------- -->
-<div> <!-- CONTAINER -->
+<div class="container"> <!-- CONTAINER -->
 
-	<div class="container"><!-- MAIN DIV -->
+	<div><!-- MAIN DIV -->
 
 		<!-- -------------------------------------------------------------------------------TODAY----------------------- -->
 
@@ -10,11 +10,13 @@
 			<div  id="task">
 				<div>
 					<input type="radio" name="radio" id="radio1" />
-					<label for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</label>
+					<label class="cursor" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</label>
 				</div>
-				<div class="time">
-					<span (click)="modal.show({component:'task', task})">{{task.date}}</span>
-					<span (click)="modal.show({component:'task', task})">{{task.time}}</span>
+				<div class="time cursor">
+					<div class="daytime">
+						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
+						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
+					</div>
 					<button type="button" (click)="ts.delete(task)" class="material-icons">clear
 					</button>
 				</div>
@@ -30,11 +32,13 @@
 			<div  id="task">
 				<div>
 					<input type="radio" name="radio" id="radio1" />
-					<label for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</label>
+					<label class="cursor" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</label>
 				</div>
-				<div class="time">
-					<span (click)="modal.show({component:'task', task})">{{task.date}}</span>
-					<span (click)="modal.show({component:'task', task})">{{task.time}}</span>
+				<div class="time cursor">
+					<div class="daytime">
+						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
+						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
+					</div>
 					<button type="button" (click)="ts.delete(task)" class="material-icons">clear
 					</button>
 				</div>
@@ -47,7 +51,7 @@
 
 	<!-- --------------------------------------------------------------------------------------MAIN BUTTON-------------------- -->
 	<div>
-		<button type="button" id="today" class="material-icons"
+		<button type="button" id="today" class="material-icons plus"
 		(click)="display()">add
 	</button>
 </div>

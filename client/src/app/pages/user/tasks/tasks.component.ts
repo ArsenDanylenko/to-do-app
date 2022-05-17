@@ -25,5 +25,4 @@ export class TasksComponent{
 			this.modal.show({component: 'task', task});
 		})
 	}
-
 }
