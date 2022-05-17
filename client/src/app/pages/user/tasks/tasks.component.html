@@ -1,22 +1,23 @@
-<div> <!-- CONTAINER STARTS -->
+<!-- ---------------------MAIN HTML TEMPLATE------------------- -->
+<div> <!-- CONTAINER -->
 
-	<div><!-- MAIN DIV STARTS -->
+	<div class="container"><!-- MAIN DIV -->
 
 		<!-- -------------------------------------------------------------------------------TODAY----------------------- -->
 
 		<h1>Today</h1>
 		<div *ngFor="let task of ts._tasks.status.today">
-			<div>
-				<button (click)="modal.show({component:'task', task})">
-					<h3>{{task.name}}</h3>
-					<p>{{task.description}}</p>
-					<p>{{task.date}}</p>
-					<p>{{task.time}}</p><br>
-				</button>
-			</div>
-			<div>		
-				<button type="button" (click)="ts.delete(task)">Delete
-				</button>
+			<div  id="task">
+				<div>
+					<input type="radio" name="radio" id="radio1" />
+					<label for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</label>
+				</div>
+				<div class="time">
+					<span (click)="modal.show({component:'task', task})">{{task.date}}</span>
+					<span (click)="modal.show({component:'task', task})">{{task.time}}</span>
+					<button type="button" (click)="ts.delete(task)" class="material-icons">clear
+					</button>
+				</div>
 			</div>
 		</div>
 
@@ -26,18 +27,18 @@
 
 		<h1>Upcoming</h1>
 		<div *ngFor="let task of ts._tasks.status.upcoming">
-			<div>
-				<button (click)="modal.show({component:'task', task})">
-					<h3>{{task.name}}</h3>
-					<p>{{task.description}}</p>
-					<p>{{task.date}}</p>
-					<p>{{task.time}}</p><br>
-				</button>
+			<div  id="task">
+				<div>
+					<input type="radio" name="radio" id="radio1" />
+					<label for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</label>
+				</div>
+				<div class="time">
+					<span (click)="modal.show({component:'task', task})">{{task.date}}</span>
+					<span (click)="modal.show({component:'task', task})">{{task.time}}</span>
+					<button type="button" (click)="ts.delete(task)" class="material-icons">clear
+					</button>
+				</div>
 			</div>
-			<div>		
-				<button type="button" (click)="ts.delete(task)">Delete
-				</button>
-			</div>			
 		</div>
 
 		<!-- --------------------UPCOMING-------------------------------------------------------------------------------- -->

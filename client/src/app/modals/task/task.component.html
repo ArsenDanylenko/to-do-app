@@ -5,4 +5,12 @@
 	<label for="date">Set the remainder time</label><br>
 	<input type="date" name="remainderdate" id="date" [(ngModel)]="task.date" (ngModelChange)="ts.update(task)"><br>
 	<input type="time" name="remaindertime" [(ngModel)]="task.time" (ngModelChange)="ts.update(task)">
+	<div>		
+		<button type="button" (click)="modal.destroy()">Save
+		</button>
+	</div>
+	<div>		
+		<button type="button" (click)="ts.delete(task); modal.destroy()">Delete this task
+		</button>
+	</div>
 </div>

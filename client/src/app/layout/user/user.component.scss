@@ -7,7 +7,7 @@
     overflow: hidden;
     @include flexBox(flex, column, null, null, null);
     background: var(--c-bg-primary);
-	transition: var(--transition);
+    transition: var(--transition);
     .main {
         flex-grow: 1;
         overflow-y: auto;
@@ -56,7 +56,7 @@
     }
     &__a {
         cursor: pointer;
-        color: var(--c-white);
+        color: var(--c-text-primary);
         font-size: var(--fs) - 2px;
         padding: 5px 10px;
         border-radius: var(--b-radius);
@@ -80,9 +80,9 @@
             }
         }
         &._activeLink {
-            &::before {
-                animation: navLinkAnimation .75s forwards;
-            }
+            // &::before {
+            //     animation: navLinkAnimation .75s forwards;
+            // }
             @keyframes navLinkAnimation {
                 0% {
                     opacity: 0;
@@ -113,7 +113,7 @@
             border-radius: 1px;
             height: 2px;
             width: 24px;
-            background: var(--c-white);
+            background: var(--c-text-primary);
             position: absolute;
             display: block;
             content: '';
@@ -164,45 +164,45 @@
             .nav__burger-link {
                 color: var(--c-text-primary);
                 padding: 10px;
-				.avatar__img {
-					border-radius: 50%;
-				}
-            }
-        }
-		&-link {
-           @include flexBox(flex, null, null, center, null);
-            .material-icons {
-                color: var(--c-text-primary);
-                font-size: var(--fs) + 14px;
-            }
-        }
-        &-user {
-            @include flexBox(flex, column, center, center, null);
+                .avatar__img {
+                   border-radius: 50%;
+               }
+           }
+       }
+       &-link {
+         @include flexBox(flex, null, null, center, null);
+         .material-icons {
             color: var(--c-text-primary);
-            padding: 5px;
-            border-bottom: 1px solid var(--c-border);
-			margin-bottom: 10px;
-            .name {
-                word-break: break-word;
-            }
-            .material-icons {
-                color: var(--c-text-primary);
-                font-size: calc(var(--fs) + 32px);
-            }
+            font-size: var(--fs) + 14px;
         }
     }
-    @include bp-max(md) {
-        order: 2;
-        &__ul {
-            justify-content: space-between;
+    &-user {
+        @include flexBox(flex, column, center, center, null);
+        color: var(--c-text-primary);
+        padding: 5px;
+        border-bottom: 1px solid var(--c-border);
+        margin-bottom: 10px;
+        .name {
+            word-break: break-word;
         }
-        &__li:last-child {
-            margin-left: 0;
-        }
-        &__burger {
-            top: 0;
+        .material-icons {
+            color: var(--c-text-primary);
+            font-size: calc(var(--fs) + 32px);
         }
     }
+}
+@include bp-max(xl) {
+    order: 2;
+    &__ul {
+        justify-content: center;
+    }
+    &__li:last-child {
+        margin-left: 0;
+    }
+    &__burger {
+        // top: 0;
+    }
+}
 }
 
 
@@ -212,4 +212,16 @@
 	.material-icons {
 		cursor: pointer;
 	}
+}
+
+
+.notebook {
+    width: 16px;
+    height: 20px;
+}
+#book {
+    fill: var(--c-text-primary);
+}
+#bookmark {
+    fill: white;
 }

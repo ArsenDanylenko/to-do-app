@@ -47,7 +47,7 @@
 - Go to ```scss/components/README.md``` - ready made html for components
 
 ## VI. HOW TO USE CLASESS
-- Go to ```scss/Classes.md``` - ready made htnl classes
+- Go to ```scss/Classes.md``` - ready made html classes
 
 ## VII. HTML/SCSS RULES
 ### We use BEM technology but changed a little for themselves (optional)

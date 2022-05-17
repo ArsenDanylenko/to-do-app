@@ -2,6 +2,7 @@
 
 import { Component } from '@angular/core';
 import { TaskService } from '@services'
+import { ModalService } from 'wacom';
 @Component({
 	selector: 'task',
 	templateUrl: './task.component.html',
@@ -11,6 +12,7 @@ export class TaskComponent{
 	public task: any = {};
 	
 	constructor(
-		public ts: TaskService
+		public ts: TaskService,
+		public modal: ModalService
 		) {}
 }

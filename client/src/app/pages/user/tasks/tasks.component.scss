@@ -1,0 +1,27 @@
+#task {
+	color: var(--c-text-secondary);
+	cursor: pointer;
+	margin: 0 auto 0 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.time {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#radio1 {
+	background-color: transparent;
+}
+button {
+	border: 1 px solid;
+	border-color: var(--c-text-secondary);
+	color: var(--c-text-secondary);
+	background: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+}

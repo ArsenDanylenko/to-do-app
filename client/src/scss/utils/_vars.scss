@@ -6,17 +6,17 @@
     --c-grey-dark: #bfbfbf;
 
     // theme
-    --c-basic: #3558ae;
+    --c-basic: #4b4c4e;
     --c-primary: #256eff;
     --c-primary-hover: #0051f1;
     --c-secondary: red;
-    --c-bg-primary: #f3f4f7;
+    --c-bg-primary: white;
     --c-bg-secondary: #ffffff;
     --c-bg-tertiary: #fcfdfe;
     --c-border: #f0f1f7;
     --c-shadow: #f3f3f3;
-    --c-text-primary: #666666;
-    --c-text-secondary: #19235c;
+    --c-text-primary: #dab3ff;
+    --c-text-secondary: #000000;
     --c-placeholder: #adb8c6;
 
     // classic
@@ -44,13 +44,13 @@
 
 
 html.dark:root {
-    --c-basic: #333;
-	--c-bg-primary: #282828;
+    --c-basic: #000000;
+	--c-bg-primary: #373839;
 	--c-bg-secondary: #343434;
 	--c-bg-tertiary: #404040;
     --c-border: #404040;
     --c-shadow: #444444;
-    --c-text-primary: #ffffff;
+    --c-text-primary: #7be7ea;
     --c-text-secondary: #ffffff;
     --c-placeholder: #7a7a7a;
 }
