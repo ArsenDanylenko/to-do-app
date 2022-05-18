@@ -51,12 +51,12 @@ export class TaskService {
 	}
 	save(task, text = 'task has been updated.'){
 		this.mongo.update('task', task, _=>{
-			if(text) this.alert.show({ text, unique: task });
+			// if(text) this.alert.show({ text, unique: task });
 		});
 	}
 	delete(task, text = 'task has been deleted.') {
 		this.mongo.delete('task', task, _=>{
-			if(text) this.alert.show({ text });
+			// if(text) this.alert.show({ text });
 		});
 	}
 }
