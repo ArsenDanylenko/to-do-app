@@ -15,7 +15,7 @@
 				<div class="time cursor">
 					<div class="daytime" [class.done]="task.clear">
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
-						<span class="time" (click)="modal.show({component:'task', task, class: 'modalClass'})">{{task.time}}</span>
+						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
 					</div>
 					<button *ngIf="task.clear" [(ngModel)]="task.clear" type="button" (click)="ts.delete(task)" class="material-icons">clear
 					</button>

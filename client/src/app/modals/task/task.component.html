@@ -2,10 +2,14 @@
 <div>
 	<div class="cont">
 		<input id="name" type="text" [(ngModel)]="task.name" (ngModelChange)="ts.update(task)" placeholder="Title" class="item-a"><br>
+
 		<textarea id="description" name="description" placeholder="Details..." rows="10" cols="10" [(ngModel)]="task.description" (ngModelChange)="ts.update(task)" class="item-c"></textarea><br>
-		<label for="date" class="item-d">Set the remainder time</label><br>
-		<input type="date" name="remainderdate" id="date" [(ngModel)]="task.date" (ngModelChange)="ts.update(task)" class="item-e"><br>
-		<input type="time" name="remaindertime" [(ngModel)]="task.time" (ngModelChange)="ts.update(task)" class="item-f">		
+
+		<label for="date" class="item-d">Set the reminder time</label><br>
+
+		<input type="date" name="reminderdate" id="date" [(ngModel)]="task.date" (ngModelChange)="ts.update(task)" class="item-e"><br>
+
+		<input type="time" name="remindertime" [(ngModel)]="task.time" (ngModelChange)="ts.update(task)" class="item-f">		
 
 		<button type="button" (click)="ts.delete(task); modal.destroy()" class="item-b">Delete this task
 		</button>
