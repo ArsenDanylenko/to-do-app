@@ -7,13 +7,13 @@
 
 		<h2>Today</h2>
 		<div *ngFor="let task of ts._tasks.status.today">
-			<div  id="task">
+			<div *ngIf="task.name" id="task">
 				<div>
 					<input type="radio" name="radio" id="radio1" (click)="task.clear=!task.clear" />
 					<span class="cursor" [class.done] ="task.clear" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</span>
 				</div>
 				<div class="time cursor">
-					<div class="daytime" [class.done]="task.clear">
+					<div *ngIf="task.time" class="daytime" [class.done]="task.clear">
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
 					</div>
@@ -29,13 +29,13 @@
 
 		<h2>Upcoming</h2>
 		<div *ngFor="let task of ts._tasks.status.upcoming">
-			<div  id="task">
+			<div *ngIf="task.name" id="task">
 				<div>
 					<input type="radio" name="radio" id="radio1" (click)="task.clear=!task.clear" />
 					<span class="cursor" [class.done]="task.clear" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</span>
 				</div>
 				<div class="time cursor">
-					<div class="daytime" [class.done]="task.clear">
+					<div *ngIf="task.time" class="daytime" [class.done]="task.clear">
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
 					</div>

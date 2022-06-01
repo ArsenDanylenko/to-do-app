@@ -25,18 +25,18 @@
 						<img class="avatar__img" width="50" height="50" [src]="us.user?.thumb || 'assets/default.png'" alt="">
 						<div class="name">{{us.user.name || "Profile"}}</div>
 					</a><br>
-					<ul>
+					<!-- <ul>
 						<li style="list-style-type: none;">
 							<a class="nav__a" (click)="show=false" routerLinkActive="_activeLink"  routerLink="/profile">
 								<span>home</span>
 							</a>
 						</li>
-						<!-- <li *ngIf="us.user.is.admin">
+						<li *ngIf="us.user.is.admin">
 							<a class="nav__a" (click)="show=false" routerLinkActive="_activeLink" [routerLinkActiveOptions]="{ exact: true }" routerLink="/admin/users">
 								<span>people</span>
 							</a>
-						</li> -->
-					</ul>
+						</li>
+					</ul> -->
 				</div>
 			</div>
 		</nav>

@@ -4,12 +4,11 @@
 	grid-template-columns: 40% 10% 40% 10%;
 	grid-template-rows: auto;
 	grid-template-areas: 
-	"title title title ."
-	"description description description ."
-	"setTimeText setTimeText setTimeText ."
-	"date . time ."
-	"delete delete delete ."
-	". . . okButton";
+	"title title title okButton"
+	"description description description description"
+	"setTimeText setTimeText setTimeText setTimeText"
+	"date date time time"
+	"delete delete delete delete";
 	background-color: var(--c-bg-primary);
 }
 .item-a {
@@ -52,7 +51,7 @@
 	border: 4px solid var(--c-text-secondary);
 	border-radius: 6px;
 	color: var(--c-text-secondary);
-	margin-top: 10px;
+	margin: 10px 10px 10px 0;
 	padding: 10px;
 	font-size: 16px;
 	font-family: "Times New Roman";
@@ -64,7 +63,7 @@
 	border: 4px solid var(--c-text-secondary);
 	border-radius: 6px;
 	color: var(--c-text-secondary);
-	margin-top: 10px;
+	margin: 10px 0 10px 10px;
 	padding: 10px;
 	font-size: 16px;
 	font-family: "Times New Roman";
@@ -72,14 +71,14 @@
 }
 .item-g {
 	grid-area: okButton;
-	font-size: 50px;
+	font-size: 16px;
 	position: absolute;
 	bottom: 5px;
 	left: 5px;
 	background-color: var(--c-text-primary);
 	color: white;
 	border: none;
-	border-radius: 50%;
+	border-radius: 6px;
 	padding: 10px;
 	@media only screen and (max-width: 576px) {
 		font-size: 20px;
