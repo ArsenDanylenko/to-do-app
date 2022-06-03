@@ -2,7 +2,7 @@
 
 import { Component } from '@angular/core';
 import { TaskService } from '@services'
-import { ModalService } from 'wacom';
+import { ModalService, AlertService } from 'wacom';
 
 @Component({
 	selector: 'task',
@@ -15,6 +15,19 @@ export class TaskComponent{
 	
 	constructor(
 		public ts: TaskService,
-		public modal: ModalService
+		public modal: ModalService,
+		private alert: AlertService
 		) {}
+
+	goBack() {
+		if (!this.task.name) {
+			this.alert.show({
+				text: 'Please type task name',
+				timeout: 3000,
+				position: 'center'
+			});
+		} else {
+			this.modal.destroy();
+		}
+	}
 }

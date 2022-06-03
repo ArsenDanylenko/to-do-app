@@ -25,6 +25,10 @@ export class TaskService {
 					} else {
 						cb('upcoming')
 					}
+
+					if(!task.clear && !task.date) {
+						cb('today')
+					}
 				}
 			}
 		}, (arr, obj)=>{

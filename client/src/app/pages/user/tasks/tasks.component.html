@@ -1,7 +1,7 @@
 <!-- ---------------------MAIN HTML TEMPLATE------------------- -->
 <div class="container"> <!-- CONTAINER -->
 
-	<div><!-- MAIN DIV -->
+	<div class="cont"><!-- MAIN DIV -->
 
 		<!-- -------------------------------------------------------------------------------TODAY----------------------- -->
 
@@ -13,7 +13,7 @@
 					<span class="cursor" [class.done] ="task.clear" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</span>
 				</div>
 				<div class="time cursor">
-					<div *ngIf="task.time" class="daytime" [class.done]="task.clear">
+					<div [class.daytime]="task.date || task.time" [class.done]="task.clear">
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
 					</div>
@@ -35,9 +35,9 @@
 					<span class="cursor" [class.done]="task.clear" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</span>
 				</div>
 				<div class="time cursor">
-					<div *ngIf="task.time" class="daytime" [class.done]="task.clear">
+					<div [class.daytime]="task.date" [class.done]="task.clear">
 						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
-						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
+						<span *ngIf="task.date" class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
 					</div>
 					<button *ngIf="task.clear" [(ngModel)]="task.clear" type="button" (click)="ts.delete(task)" class="material-icons">clear
 					</button>
@@ -52,10 +52,9 @@
 	<!-- --------------------------------------------------------------------------------------MAIN BUTTON-------------------- -->
 	<div>
 		<button type="button" id="today" class="material-icons plus"
-		(click)="display()">add
-	</button>
-</div>
-<!-- ---------------------------MAIN BUTTON--------------------------------------------------------------------------------------- -->
+		(click)="display()">add</button>
+	</div>
+	<!-- ---------------------------MAIN BUTTON--------------------------------------------------------------------------------------- -->
 
 </div> <!-- CONTAINER ENDS -->
 

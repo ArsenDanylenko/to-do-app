@@ -11,8 +11,8 @@ body {
     position: relative;
     overflow: hidden;
     height: 100%;
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 /* === PAGE LAYOUT === */
 .container {
@@ -20,5 +20,10 @@ body {
     margin-right: auto;
     padding: var(--padding);
     max-width: var(--container);
-    width: 100%;
+    @media only screen and (min-width: 660px) {
+        max-width: 70%
+    }
+    @media only screen and (min-width: 960px) {
+        max-width: 50%
+    }
 }

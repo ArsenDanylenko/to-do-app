@@ -1,3 +1,7 @@
+.cont {
+	// max-height: 480px;
+	// overflow: auto;
+}
 #task {
 	color: var(--c-text-secondary);
 	margin: 0 auto 0 15px;
@@ -42,12 +46,20 @@ button {
 
 button.plus {
 	font-size: 70px;
-	position: absolute;
-	bottom: 30px;
+	position: fixed;
+	bottom: 20px;
 	right: 30px;
+	z-index: 99;
 	background-color: var(--c-text-primary);
 	color: white;
 	border: none;
+	outline: none;
+	&:hover {
+		background-color: var(--c-bg-tertiary);
+	}
+	&:active {
+		background-color: var(--c-bg-tertiary);
+	}
 }
 .done {
 	text-decoration: line-through;
