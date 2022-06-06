@@ -12,7 +12,15 @@ export class TaskService {
 		private alert: AlertService) { 
 		this.tasks = mongo.get('task', {
 
-			groups: 'status',
+			groups: {
+				status: {
+					field: doc=>doc.status,
+					sort: (a,b)=>{
+						if(a._id > b._id) return 1;
+						return -1;
+					}
+				}
+			},
 			replace: {
 				status: (val, cb, task) => {
 					const n = new Date();
@@ -21,13 +29,13 @@ export class TaskService {
 					today += (n.getDate() > 10 ? '' : '0') + n.getDate();
 
 					if(task.date === today) {
-						cb('today')
+						cb('today');
+					} else if(!task.clear && !task.date) {
+						cb('today');
+					} else if(task.date < today) {
+						cb('today');
 					} else {
-						cb('upcoming')
-					}
-
-					if(!task.clear && !task.date) {
-						cb('today')
+						cb('upcoming');
 					}
 				}
 			}

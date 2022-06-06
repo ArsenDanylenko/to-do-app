@@ -22,7 +22,7 @@ export class TaskComponent{
 	goBack() {
 		if (!this.task.name) {
 			this.alert.show({
-				text: 'Please type task name',
+				text: 'Please type the task name',
 				timeout: 3000,
 				position: 'center'
 			});

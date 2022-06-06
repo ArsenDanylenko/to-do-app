@@ -13,9 +13,8 @@
 					<span class="cursor" [class.done] ="task.clear" for="radio1" (click)="modal.show({component:'task', task})">{{task.name}}</span>
 				</div>
 				<div class="time cursor">
-					<div [class.daytime]="task.date || task.time" [class.done]="task.clear">
-						<span class="time" (click)="modal.show({component:'task', task})">{{task.date | date:'ccc'}}</span>
-						<span class="time" (click)="modal.show({component:'task', task})">{{task.time}}</span>
+					<div>
+						<span class="time" [class.daytime]="task.date || task.time" [class.done]="task.clear" (click)="modal.show({component:'task', task})">{{task.time}}</span>
 					</div>
 					<button *ngIf="task.clear" [(ngModel)]="task.clear" type="button" (click)="ts.delete(task)" class="material-icons">clear
 					</button>
