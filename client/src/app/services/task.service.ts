@@ -15,11 +15,20 @@ export class TaskService {
 			groups: {
 				status: {
 					field: doc=>doc.status,
-					sort: (a,b)=>{
-						if(a._id > b._id) return 1;
-						return -1;
+					replace: {
+						dateNow: (val, cb, doc) => {
+							cb(new Date(doc.date).getTime());
+
+						}
+					},
+					sort: (a, b) => {
+						if (a.dateNow < b.dateNow) {
+							return 1;
+						} else {
+							return -1;
+						}
 					}
-				}
+				},
 			},
 			replace: {
 				status: (val, cb, task) => {
