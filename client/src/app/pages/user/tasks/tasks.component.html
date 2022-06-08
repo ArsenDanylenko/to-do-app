@@ -6,7 +6,7 @@
 		<!-- -------------------------------------------------------------------------------TODAY----------------------- -->
 
 		<h2>Today</h2>
-		<div *ngFor="let task of ts._tasks.status.today">
+		<div *ngFor="let task of ts._tasks.status?.today">
 			<div *ngIf="task.name" id="task">
 				<div>
 					<input type="radio" name="radio" id="radio1" (click)="task.clear=!task.clear" />
@@ -27,7 +27,7 @@
 		<!-- -------------------------------------------------------------------------------UPCOMING---------------------- -->
 
 		<h2>Upcoming</h2>
-		<div *ngFor="let task of ts._tasks.status.upcoming">
+		<div *ngFor="let task of ts._tasks.status?.upcoming">
 			<div *ngIf="task.name" id="task">
 				<div>
 					<input type="radio" name="radio" id="radio1" (click)="task.clear=!task.clear" />

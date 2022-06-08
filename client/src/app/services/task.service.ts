@@ -11,23 +11,11 @@ export class TaskService {
 		private mongo: MongoService,
 		private alert: AlertService) { 
 		this.tasks = mongo.get('task', {
-
+			
 			groups: {
 				status: {
 					field: doc=>doc.status,
-					replace: {
-						dateNow: (val, cb, doc) => {
-							cb(new Date(doc.date).getTime());
-
-						}
-					},
-					sort: (a, b) => {
-						if (a.dateNow < b.dateNow) {
-							return 1;
-						} else {
-							return -1;
-						}
-					}
+					sort: (a,b) => a.arsen > b.arsen ? 1 : -1
 				},
 			},
 			replace: {
@@ -46,10 +34,14 @@ export class TaskService {
 					} else {
 						cb('upcoming');
 					}
+				},
+				 arsen: (val, cb, doc) => {
+					cb(new Date(doc.date).getTime());
 				}
 			}
 		}, (arr, obj)=>{
 			this._tasks = obj;
+			console.log (this.tasks)
 		});
 	}
 	create(task:any={}, cb=task=>{}) {
