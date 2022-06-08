@@ -37,6 +37,7 @@
         margin-top: 0;
         margin-bottom: 0;
         padding: 0 10px;
+        box-sizing: border-box;
         transition: var(--transition);
         @include flexBox(flex, null, null, center, null);
         width: 100%;
@@ -48,7 +49,7 @@
             height: 34px;
         }
         &:last-child {
-            margin-left: auto;
+            margin-right: 10px;
         }
         &:not(:last-child) {
             margin-right: 10px;
@@ -79,10 +80,15 @@
                 top: -3px;
             }
         }
+        &:hover {
+            background-color: var(--c-todo-button);
+            height: 100%;
+        }
+        &:active {
+            background-color: var(--c-todo-button);
+            height: 100%;
+        }
         &._activeLink {
-            // &::before {
-            //     animation: navLinkAnimation .75s forwards;
-            // }
             @keyframes navLinkAnimation {
                 0% {
                     opacity: 0;
@@ -104,6 +110,8 @@
         height: 100%;
         @include flexBox(flex, null, null, center, null);
         position: relative;
+        justify-content: center;
+        border-radius: var(--b-radius);
         order: 3;
         cursor: pointer;
         &-line,
@@ -138,6 +146,15 @@
                 transform: rotate(-45deg);
             }
         }
+        &:hover {
+            background-color: var(--c-todo-button);
+            height: 100%;
+        }
+        &:active {
+            background-color: var(--c-todo-button);
+            height: 100%;
+        }
+
     }
     &__burger {
         margin: 0;

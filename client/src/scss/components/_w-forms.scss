@@ -15,10 +15,10 @@
     &__textarea,
 	&__select {
 		height: 42px;
-        background-color: var(--c-bg-tertiary);
+        background-color: white;
         border: 1px solid var(--c-border);
         border-radius: var(--b-radius);
-        color: var(--c-text-secondary);
+        color: var(--c-bg-secondary);
         font-size: calc(#{var(--fs)} - 2px);
 		line-height: calc(#{var(--fs)} + 4px);
         transition: var(--transition);

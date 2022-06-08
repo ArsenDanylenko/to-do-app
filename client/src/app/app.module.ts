@@ -92,8 +92,8 @@ const routes: Routes = [{
             meta: {
                 useTitleSuffix: true,
                 defaults: {
-                    title: 'Web Art Work',
-                    titleSuffix: ' | Web Art Work',
+                    title: 'My Planner',
+                    titleSuffix: ' | My Planner',
                     'og:image': 'https://webart.work/api/user/cdn/waw-logo.png'
                 }
             },
