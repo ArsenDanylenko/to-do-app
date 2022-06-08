@@ -193,7 +193,7 @@ module.exports = async function(waw) {
 				delete user.password;
 				delete user.resetPin;
 				user.token = nJwt.create(user, waw.config.signingKey);
-				user.token.setExpiration(new Date().getTime() + (48 * 60 * 60 * 1000));
+				//user.token.setExpiration(new Date().getTime() + (8760 * 60 * 60 * 1000));
 				user.token = user.token.compact();
 				res.json(user);
 			});

@@ -73,7 +73,7 @@ const routes: Routes = [{
 		loadChildren: () => import('./pages/admin/users/users.module').then(m => m.UsersModule)
 	}]
 }, {
-	path: '**', redirectTo: 'profile', pathMatch: 'full'
+	path: '**', redirectTo: 'tasks', pathMatch: 'full'
 }];
 
 @NgModule({
