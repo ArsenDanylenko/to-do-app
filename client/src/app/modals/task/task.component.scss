@@ -21,6 +21,7 @@
 }
 .item-b {
 	grid-area: delete;
+	cursor: pointer;
 	background: red;
 	color: var(--c-text-secondary);
 	border-color: var(--c-text-secondary);
@@ -31,9 +32,10 @@
 	font-family: 'Poppins', sans-serif;
 	&:hover {
 		background-color: #cc0000;
-		&:active {
-			background-color: #cc0000;
-		}
+	}
+	&:active {
+		background-color: #cc0000;
+	}
 }
 .item-c {
 	grid-area: description;
@@ -85,9 +87,9 @@
 	margin: 0 0 10px 0;
 	&:hover {
 		background-color: var(--c-bg-tertiary);
-		&:active {
-			background-color: var(--c-bg-tertiary);
-		}
+	}
+	&:active {
+		background-color: var(--c-bg-tertiary);
 	}
 }
 
