@@ -1,5 +1,5 @@
 {
-	"name": "My Planner",
+	"name": "MyPlanner",
 	"description": "Default waw project with Angular client and Template landing",
 	"keywords": "Default Project",
 	"license": "MIT",
@@ -10,7 +10,7 @@
 	"mongo": {
 		"host": "localhost",
 		"port": 27017,
-		"db": "Todo"
+		"db": "todo"
 	},
 	"modules": {
 		"template": "waw",
