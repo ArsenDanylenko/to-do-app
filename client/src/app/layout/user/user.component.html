@@ -8,13 +8,15 @@
 					</a>
 				</li>
 			</ul>
-			<ul style="padding-inline-start: 0px;">
-				<li class="nav__li _burger">
-					<a class="nav__toggle" (click)="show=!show" [class._active]="show">
-						<span class="nav__toggle-line"></span>
-					</a>
-				</li>
-			</ul>
+			<!-- <li class="nav__li _burger">
+			</li>				
+			<ul style="padding-inline-start: 0px;">				
+			</ul> -->
+			<div class="fortogglediv">
+				<a class="nav__toggle" (click)="show=!show" [class._active]="show">
+					<span class="nav__toggle-line"></span>
+				</a>
+			</div>
 			<div class="nav__burger" [class._active]="show">
 				<div class="nav__burger-list">
 					<div class="theme-switch">

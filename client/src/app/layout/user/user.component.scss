@@ -23,6 +23,23 @@
     }
 }
 /*  NAV STYLE  */
+.fortogglediv {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius:var(--b-radius);
+    height: 52px;
+    width: 44px;
+    &:hover {
+        background-color: var(--c-todo-button);
+        // height: 100%;
+    }
+    &:active {
+        background-color: var(--c-todo-button);
+        // height: 100%;
+    }
+}
 .nav {
 	transition: var(--transition);
     background: var(--c-basic);
