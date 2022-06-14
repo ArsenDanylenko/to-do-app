@@ -14,7 +14,7 @@
 .item-a {
 	grid-area: title;
 	background-color: var(--c-bg-primary);
-	border: 4px solid var(--c-text-secondary);
+	border: 2px solid var(--c-text-secondary);
 	border-radius: 6px;
 	color: var(--c-text-secondary);
 	margin: 0 10px 10px 0;
@@ -40,7 +40,7 @@
 .item-c {
 	grid-area: description;
 	background-color: var(--c-bg-primary);
-	border: 4px solid var(--c-text-secondary);
+	border: 2px solid var(--c-text-secondary);
 	border-radius: 6px;
 	color: var(--c-text-secondary);
 	padding: 10px;
@@ -55,7 +55,7 @@
 .item-e {
 	grid-area: date;
 	background-color: var(--c-bg-primary);
-	border: 4px solid var(--c-text-secondary);
+	border: 2px solid var(--c-text-secondary);
 	border-radius: 6px;
 	color: var(--c-text-secondary);
 	margin: 10px 10px 10px 0;
@@ -67,7 +67,7 @@
 .item-f {
 	grid-area: time;
 	background-color: var(--c-bg-primary);
-	border: 4px solid var(--c-text-secondary);
+	border: 2px solid var(--c-text-secondary);
 	border-radius: 6px;
 	color: var(--c-text-secondary);
 	margin: 10px 0 10px 10px;
